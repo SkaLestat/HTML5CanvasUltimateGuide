@@ -1,32 +1,39 @@
 window.onload = () => {
     /* Definition */
     let canvas = document.getElementById("hello-world-canvas");
-    let context = canvas.getContext("2d");
+    let ctx = canvas.getContext("2d");
 
-    /* Draw Line steps */
-    context.beginPath(); // reset the context state, beginPath() method begins a path, or resets the current path.
-    context.moveTo(30, 30); // moveTo(x,y)  -> starting point of the line
-    context.lineTo(80, 80); // lineTo(x,y)  -> end point of the line
-    context.lineTo(130, 30); // lineTo(x,y)  -> end point of the line
-    context.lineTo(180, 80); // lineTo(x,y)  -> end point of the line
-    context.lineTo(230, 30); // lineTo(x,y)  -> end point of the line
-    context.stroke(); // Draw the line
+    /**
+     * Line Caps -> ctx.lineCap = "";
+     * - butt -> default
+     * - round
+     * - square
+     */
 
-    /* Draw Line steps */
-    // context.beginPath(); // reset the context state
-    // context.moveTo(80, 80); // moveTo(x,y)  -> starting point of the line
-    // context.lineTo(130, 30); // lineTo(x,y)  -> end point of the line
-    // context.stroke(); // Draw the line
+    /* First Line */
+    ctx.beginPath();
+    ctx.lineCap = "butt";
+    ctx.strokeStyle = "red";
+    ctx.lineWidth = 10;
+    ctx.moveTo(100, 100);
+    ctx.lineTo(300, 100);
+    ctx.stroke();
     
-    /* Draw Line steps */
-    // context.beginPath(); // reset the context state
-    // context.moveTo(130, 30); // moveTo(x,y)  -> starting point of the line
-    // context.lineTo(180, 80); // lineTo(x,y)  -> end point of the line
-    // context.stroke(); // Draw the line
-
-    /* Draw Line steps */
-    // context.beginPath(); // reset the context state
-    // context.moveTo(180, 80); // moveTo(x,y)  -> starting point of the line
-    // context.lineTo(230, 30); // lineTo(x,y)  -> end point of the line
-    // context.stroke(); // Draw the line
+    /* Second Line */
+    ctx.beginPath();
+    ctx.lineCap = "round";
+    ctx.strokeStyle = "blue";
+    ctx.lineWidth = 10;
+    ctx.moveTo(100, 125);
+    ctx.lineTo(300, 125);
+    ctx.stroke();
+    
+    /* Second Line */
+    ctx.beginPath();
+    ctx.lineCap = "square";
+    ctx.strokeStyle = "green";
+    ctx.lineWidth = 10;
+    ctx.moveTo(100, 150);
+    ctx.lineTo(300, 150);
+    ctx.stroke();
 }
