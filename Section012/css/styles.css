@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "Future";
+    src: url(./../assets/kenvector_future.ttf);
+}
+#container{
+    width: 900px;
+    height: 600px;
+    margin: 0 auto;
+    border: 1px solid #000;
+}

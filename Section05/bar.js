@@ -7,7 +7,7 @@
  * 
  * Copyright 2023 Ruben T
  * Released under the MIT License
- * {license url}
+ * https://opensource.org/license/mit/
  * 
  */
 
